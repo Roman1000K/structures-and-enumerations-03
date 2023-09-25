@@ -17,26 +17,21 @@ void print(std::string City, std::string Street, int HouseNumber, int ApartmentN
 int main()  
 {    
     SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);    
+    SetConsoleOutputCP(1251);   
+
+    address address1;
      
     std::cout << "Введите ваш адрес\n";
     std::cout << "Город: ";
-    std::string City;
-    std::cin >> City;
+    std::cin >> address1.City;
     std::cout << "Улица: ";
-    std::string Street;
-    std::cin >> Street;
+    std::cin >> address1.Street;
     std::cout << "Номер дома: ";
-    int HouseNumber;
-    std::cin >> HouseNumber;
+    std::cin >> address1.HouseNumber;
     std::cout << "Номер квартиры: ";
-    int ApartmentNumber;
-    std::cin >> ApartmentNumber;
+    std::cin >> address1.ApartmentNumber;
     std::cout << "Почтовый индекс: ";
-    int Index;
-    std::cin >> Index;
+    std::cin >> address1.Index;
 
-    address address1 = { City, Street, HouseNumber, ApartmentNumber, Index };
-
-    print(City, Street, HouseNumber, ApartmentNumber, Index);
+    print(address1.City, address1.Street, address1.HouseNumber, address1.ApartmentNumber, address1.Index);
 }
